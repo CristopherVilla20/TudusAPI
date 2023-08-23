@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "JJMG1605",
     "database": "TudusDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -17,7 +17,8 @@
     "username": "root",
     "password": "rdMDkeWIIn4076FDaFeA",
     "database": "railway",
-    "host": "127.0.0.1",
+    "port": "6193",
+    "host": "containers-us-west-193.railway.app",
     "dialect": "mysql",
     "url":"mysql://root:rdMDkeWIIn4076FDaFeA@containers-us-west-193.railway.app:6193/railway"
   }
