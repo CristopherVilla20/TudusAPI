@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "swagger-autogen": "node swagger.js",
     "packages:install": "npm install sequelize pg && npm install --save-dev sequelize-cli",
     "start": "npm run packages:install && node ./bin/www"
   },
@@ -15,6 +16,8 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "mysql2": "^3.6.0",
-    "sequelize": "^6.32.1"
+    "sequelize": "^6.32.1",
+    "swagger-autogen": "^2.23.5",
+    "swagger-ui-express": "^5.0.0"
   }
 }

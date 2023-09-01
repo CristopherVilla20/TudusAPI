@@ -11,6 +11,12 @@ var usersRouter = require('./routes/users');
 var PersonaRouter = require('./routes/rest_Persona');
 var AsignacionRouter = require('./routes/rest_Asignacion');
 var TareaRouter = require('./routes/rest_Tarea'); // Importa el nuevo archivo de enrutamiento
+/* REFERENCIA AL MÓDULO */
+const swaggerUi = require('swagger-ui-express')
+
+/* REFERENCIA AL ARCHIVO GENERADO */
+const swaggerFile = require('./swagger_output.json')
+
 
 var cors = require('cors')
 
@@ -31,6 +37,10 @@ app.use('/users', usersRouter);
 app.use('/rest/Persona', PersonaRouter);
 app.use('/rest/Asignacion', AsignacionRouter);
 app.use('/rest/Tarea', TareaRouter); // Usa el nuevo archivo de enrutamiento
+
+/* CONFIGURACIÓN DE LA RUTA A LA DOCUMENTACIÓN */
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+
 
 app.use(function(req, res, next) {
   next(createError(404));
